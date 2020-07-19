@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/7 | \^O^/ 欢迎来访 ٩(๑^o^๑)۶</title>
+  <title>【C语言】控制台窗口图形界面编程：光标设置 | \^O^/ 欢迎来访 ٩(๑^o^๑)۶</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="\^O^&#x2F; 欢迎来访 ٩(๑^o^๑)۶">
-<meta property="og:url" content="http://yoursite.com/archives/2020/07/index.html">
+  <meta name="description" content="目录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【C语言】控制台窗口图形界面编程：光标设置">
+<meta property="og:url" content="http://yoursite.com/2020/07/19/%E3%80%90C%E8%AF%AD%E8%A8%80%E3%80%91%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AA%97%E5%8F%A3%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%BC%96%E7%A8%8B%EF%BC%9A%E5%85%89%E6%A0%87%E8%AE%BE%E7%BD%AE/index.html">
 <meta property="og:site_name" content="\^O^&#x2F; 欢迎来访 ٩(๑^o^๑)۶">
+<meta property="og:description" content="目录">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1697806/201905/1697806-20190525184718666-841962334.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1697806/201905/1697806-20190525184728485-1158680471.gif">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1697806/201905/1697806-20190525184740220-295436324.png">
+<meta property="article:published_time" content="2020-07-19T05:31:16.000Z">
+<meta property="article:modified_time" content="2020-07-19T05:55:32.174Z">
 <meta property="article:author" content="wlq">
+<meta property="article:tag" content="c&#x2F;c++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1697806/201905/1697806-20190525184718666-841962334.png">
   
     <link rel="alternative" href="/atom.xml" title="\^O^/ 欢迎来访 ٩(๑^o^๑)۶" type="application/atom+xml">
   
@@ -149,36 +158,97 @@
           </div>
           <div id="js-content" class="content-ll">
             
+<article id="post-【C语言】控制台窗口图形界面编程：光标设置" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      【C语言】控制台窗口图形界面编程：光标设置
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
 <a href="/2020/07/19/%E3%80%90C%E8%AF%AD%E8%A8%80%E3%80%91%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AA%97%E5%8F%A3%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%BC%96%E7%A8%8B%EF%BC%9A%E5%85%89%E6%A0%87%E8%AE%BE%E7%BD%AE/" class="archive-article-date">
   	<time datetime="2020-07-19T05:31:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/19/%E3%80%90C%E8%AF%AD%E8%A8%80%E3%80%91%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AA%97%E5%8F%A3%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%BC%96%E7%A8%8B%EF%BC%9A%E5%85%89%E6%A0%87%E8%AE%BE%E7%BD%AE/">【C语言】控制台窗口图形界面编程：光标设置</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1><span id="目录">目录</span></h1><a id="more"></a>
+<!-- TOC -->
 
-        <div class="article-info info-on-right">
-          
+<ul>
+<li><a href="#目录">目录</a></li>
+<li><a href="#01-console_cursor_info结构">01. CONSOLE_CURSOR_INFO结构</a></li>
+<li><a href="#02-getconsolecursorinfo函数">02. GetConsoleCursorInfo函数</a></li>
+<li><a href="#03-setconsolecursorinfo函数">03. SetConsoleCursorInfo函数</a></li>
+<li><a href="#04-setconsolecursorposition函数">04. SetConsoleCursorPosition函数</a></li>
+</ul>
+<!-- /TOC -->
+
+<h1><span id="01-console_cursor_info结构">01. CONSOLE_CURSOR_INFO结构</span></h1><p>包含有关控制台光标的信息。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">CONSOLE_CURSOR_INFO</span> &#123;</span></span><br><span class="line">  DWORD dwSize;</span><br><span class="line">  BOOL  bVisible;</span><br><span class="line">&#125; CONSOLE_CURSOR_INFO, *PCONSOLE_CURSOR_INFO;</span><br></pre></td></tr></table></figure>
+<p>dwSize<br>光标填充的字符单元格的百分比。该值介于1和100之间。光标外观会发生变化，从完全填充单元格到显示为单元格底部的水平线。</p>
+<p>注意 虽然dwSize值通常介于1和100之间，但在某些情况下，可能会返回该范围之外的值。例如，如果在注册表中将CursorSize设置为0，则返回的dwSize值将为0。</p>
+<p>bVisible<br>光标的可见性。如果光标可见，则此成员为TRUE。</p>
+<h1><span id="02-getconsolecursorinfo函数">02. GetConsoleCursorInfo函数</span></h1><p>获取有关指定控制台屏幕缓冲区的光标大小和可见性的信息。</p>
+<p>类型声明</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL WINAPI <span class="title">GetConsoleCursorInfo</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">  _In_  HANDLE               hConsoleOutput,</span></span></span><br><span class="line"><span class="function"><span class="params">  _Out_ PCONSOLE_CURSOR_INFO lpConsoleCursorInfo</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br><span class="line"></span><br><span class="line">功能:</span><br><span class="line">	获取光标相关信息</span><br><span class="line">参数:</span><br><span class="line">	hConsoleOutput 控制台屏幕缓冲区的句柄。句柄必须具有GENERIC_READ访问权限。</span><br><span class="line">	lpConsoleCursorInfo 指向CONSOLE_CURSOR_INFO结构的指针，该结构接收有关控制台游标的信息。</span><br><span class="line"></span><br><span class="line">返回值:</span><br><span class="line">	如果函数成功，则返回值为非零值。</span><br><span class="line">	如果函数失败，则返回值为零。要获取扩展错误信息，请调用GetLastError。</span><br></pre></td></tr></table></figure>
+<p>参考程序</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;conio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//定义句柄变量</span></span><br><span class="line">	HANDLE hOut = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//光标信息变量</span></span><br><span class="line">	CONSOLE_CURSOR_INFO cursorInfo;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取标准输出句柄</span></span><br><span class="line">	hOut = GetStdHandle(STD_OUTPUT_HANDLE);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取当前光标信息</span></span><br><span class="line">	GetConsoleCursorInfo(hOut, &amp;cursorInfo);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"光标默认大小: %d 光标是否可见: %d\n"</span>, cursorInfo.dwSize, cursorInfo.bVisible);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">//关闭句柄</span></span><br><span class="line">	CloseHandle(hOut);</span><br><span class="line"></span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img2018.cnblogs.com/blog/1697806/201905/1697806-20190525184718666-841962334.png" alt></p>
+<h1><span id="03-setconsolecursorinfo函数">03. SetConsoleCursorInfo函数</span></h1><p>设置指定控制台屏幕缓冲区的光标大小和可见性。</p>
+<p>函数声明:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL WINAPI <span class="title">SetConsoleCursorInfo</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">  _In_       HANDLE              hConsoleOutput,</span></span></span><br><span class="line"><span class="function"><span class="params">  _In_ <span class="keyword">const</span> CONSOLE_CURSOR_INFO *lpConsoleCursorInfo</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br><span class="line">功能：</span><br><span class="line">	设置光标的属性</span><br><span class="line">参数：</span><br><span class="line">	hConsoleOutput 控制台屏幕缓冲区的句柄。句柄必须具有GENERIC_READ访问权限。</span><br><span class="line">	lpConsoleCursorInfo 指向CONSOLE_CURSOR_INFO结构的指针，该结构为控制台屏幕缓冲区的游标提供新规范。</span><br><span class="line"></span><br><span class="line">返回值：</span><br><span class="line">	如果函数成功，则返回值为非零值。</span><br><span class="line">	如果函数失败，则返回值为零。要获取扩展错误信息，请调用GetLastError。</span><br></pre></td></tr></table></figure>
+<p>参考程序</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;conio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//定义句柄变量</span></span><br><span class="line">	HANDLE hOut = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//光标信息变量</span></span><br><span class="line">	CONSOLE_CURSOR_INFO cursorInfo;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取标准输出句柄</span></span><br><span class="line">	hOut = GetStdHandle(STD_OUTPUT_HANDLE);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取当前光标信息</span></span><br><span class="line">	GetConsoleCursorInfo(hOut, &amp;cursorInfo);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"光标默认大小: %d 光标是否可见: %d\n"</span>, cursorInfo.dwSize, cursorInfo.bVisible);</span><br><span class="line"></span><br><span class="line">	getchar();</span><br><span class="line">	<span class="comment">//设置光标的尺寸为20</span></span><br><span class="line">	cursorInfo.dwSize = <span class="number">5</span>;</span><br><span class="line">	SetConsoleCursorInfo(hOut, &amp;cursorInfo);</span><br><span class="line"></span><br><span class="line">	getchar();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设置光标的尺寸为50</span></span><br><span class="line">	cursorInfo.dwSize = <span class="number">50</span>;</span><br><span class="line">	SetConsoleCursorInfo(hOut, &amp;cursorInfo);</span><br><span class="line"></span><br><span class="line">	getchar();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设置光标的尺寸为100</span></span><br><span class="line">	cursorInfo.dwSize = <span class="number">100</span>;</span><br><span class="line">	SetConsoleCursorInfo(hOut, &amp;cursorInfo);</span><br><span class="line"></span><br><span class="line">	getchar();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设置光标不可见</span></span><br><span class="line">	cursorInfo.dwSize = <span class="number">25</span>;</span><br><span class="line">	cursorInfo.bVisible = <span class="number">0</span>;</span><br><span class="line">	SetConsoleCursorInfo(hOut, &amp;cursorInfo);</span><br><span class="line"></span><br><span class="line">	getchar();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//关闭句柄</span></span><br><span class="line">	CloseHandle(hOut);</span><br><span class="line"></span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行结果<br><img src="https://img2018.cnblogs.com/blog/1697806/201905/1697806-20190525184728485-1158680471.gif" alt></p>
+<h1><span id="04-setconsolecursorposition函数">04. SetConsoleCursorPosition函数</span></h1><p>设置指定控制台屏幕缓冲区中的光标位置。</p>
+<p>函数声明：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL WINAPI <span class="title">SetConsoleCursorPosition</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">  _In_ HANDLE hConsoleOutput,</span></span></span><br><span class="line"><span class="function"><span class="params">  _In_ COORD  dwCursorPosition</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br><span class="line"></span><br><span class="line">功能：</span><br><span class="line">	设置光标的位置</span><br><span class="line">	</span><br><span class="line">参数：</span><br><span class="line">	hConsoleOutput 控制台屏幕缓冲区的句柄。句柄必须具有GENERIC_READ访问权限。</span><br><span class="line">	dwCursorPosition 用于指定新的光标位置（以字符为单位）。坐标是屏幕缓冲区字符单元格的列和行。坐标必须位于控制台屏幕缓冲区的边界内。</span><br><span class="line">	</span><br><span class="line">返回值：</span><br><span class="line">	如果函数成功，则返回值为非零值。</span><br><span class="line">	如果函数失败，则返回值为零。要获取扩展错误信息，请调用GetLastError。</span><br></pre></td></tr></table></figure>
+<p>参考程序；</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;conio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//定义句柄变量</span></span><br><span class="line">	HANDLE hOut = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">	COORD pos;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取标准输出句柄</span></span><br><span class="line">	hOut = GetStdHandle(STD_OUTPUT_HANDLE);</span><br><span class="line"></span><br><span class="line">	pos.X = <span class="number">8</span>;</span><br><span class="line">	pos.Y = <span class="number">8</span>;</span><br><span class="line">	<span class="comment">//设置光标的位置</span></span><br><span class="line">	SetConsoleCursorPosition(hOut, pos);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello itcast1"</span>);</span><br><span class="line"></span><br><span class="line">	pos.X = <span class="number">18</span>;</span><br><span class="line">	pos.Y = <span class="number">16</span>;</span><br><span class="line">	<span class="comment">//设置光标的位置</span></span><br><span class="line">	SetConsoleCursorPosition(hOut, pos);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello itcast2"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">//关闭句柄</span></span><br><span class="line">	CloseHandle(hOut);</span><br><span class="line"></span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试结果：<br><img src="https://img2018.cnblogs.com/blog/1697806/201905/1697806-20190525184740220-295436324.png" alt></p>
+<p>附：原文作者：<a href="https://www.cnblogs.com/szitcast/" target="_blank" rel="noopener">沧海一笑_DJ</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -190,137 +260,147 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://wlq9810.github.io/2020/07/19/%E3%80%90C%E8%AF%AD%E8%A8%80%E3%80%91%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AA%97%E5%8F%A3%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%BC%96%E7%A8%8B%EF%BC%9A%E5%85%89%E6%A0%87%E8%AE%BE%E7%BD%AE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/07/18/c++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-07-18T05:22:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/18/c++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">c++笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/18/c++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">c++笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">c/c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">01. CONSOLE_CURSOR_INFO结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">02. GetConsoleCursorInfo函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">03. SetConsoleCursorInfo函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">04. SetConsoleCursorPosition函数</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/07/11/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-07-11T06:38:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-11</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/11/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/07/11/hello-world/" class="archive-article-date">
-  	<time datetime="2020-07-10T16:09:59.458Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/11/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
+
+
+  
+      <section id="comments" class="comments">
+        <style>
+          .comments{margin:30px;padding:10px;background:#fff}
+          @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+        </style>
+        <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var notify = 'false' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+    av: AV,
+    el: '#vcomment',
+    notify: notify,
+    app_id: "526UBDKvlONOTEYLk8vRChrp-gzGzoHsz",
+    app_key: "1kMxHzIegg2hwisJjzE88zSQ",
+    placeholder: "Just go go",
+    avatar: "mm",
+  });
+</script>
+    </section>
+  
 
           </div>
         </div>
@@ -357,8 +437,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
